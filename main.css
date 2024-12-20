@@ -24,7 +24,7 @@ main{
     border-radius: 10px;
     margin: auto;
     padding: 20px 20px;
-    width: clamp(320px, 85%, 610px);
+    width: clamp(320px, 90%, 610px);
 }
 /* fonts */
 h1, h2, p{
@@ -35,12 +35,12 @@ h1, h2, p{
 h2{
     flex-grow: 1;
     font-size: 1.15rem;
-    max-width: 90%;
+    max-width: 82%;
 }
 p{
     font-weight: 300;
-    font-size: 1.08rem;
-    color: var(--);
+    font-size: 1.07rem;
+    color: var(--grayishPurple);
     line-height: 25px;
 }
 
@@ -92,6 +92,12 @@ button{
     }
     body{
         background-image: url('assets/images/background-pattern-desktop.svg');
+    }
+    h2{
+        max-width: 90%;
+    }
+    button{
+        left: 93%;
     }
     h2:hover{
         cursor: pointer;

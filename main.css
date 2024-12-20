@@ -4,7 +4,7 @@
     --grayishPurple: hsl(292, 16%, 49%);
     --darkPurple: hsl(292, 42%, 14%);
 
-    --font-size : 16px;
+    font-size : 16px;
 }
 *{
 box-sizing: border-box;
@@ -16,8 +16,7 @@ body{
     background-repeat: no-repeat;
     background-size: 100% auto;
     display: flex;
-    align-items: center;
-    
+    align-items: center;    
     min-height: 100vh;
 }
 main{
@@ -25,22 +24,24 @@ main{
     border-radius: 10px;
     margin: auto;
     padding: 20px 20px;
-    width: clamp(320px, 80%, 600px);
+    width: clamp(320px, 85%, 610px);
 }
 /* fonts */
-h1, h2{
+h1, h2, p{
+    word-spacing: 1px;
     color: var(--darkPurple);
 }
 
 h2{
     flex-grow: 1;
     font-size: 1.15rem;
-    max-width: 80%;
+    max-width: 90%;
 }
 p{
     font-weight: 300;
     font-size: 1.08rem;
-    color: var(--grayishPurple);
+    color: var(--);
+    line-height: 25px;
 }
 
 
@@ -63,6 +64,10 @@ section > div{
 .second p, .third p, .fourth p{
     display: none;
 }
+.first .plus, .second .minus, .third .minus, .fourth .minus{
+    display: none;
+}
+
 button{
     background-color: transparent;
     border: none;
@@ -74,6 +79,25 @@ button{
     position: absolute;
     left: 91%;
 }
-button:hover{
-    cursor: pointer;
+
+@media screen and (min-width:800px) {
+    body{
+        background-image: url('assets/images/background-pattern-desktop.svg');
+    }
+}
+
+@media screen and (min-width:960px) {
+    :root{
+        font-size : 19px;
+    }
+    body{
+        background-image: url('assets/images/background-pattern-desktop.svg');
+    }
+    h2:hover{
+        cursor: pointer;
+        color: var(--grayishPurple);
+    }
+    button:hover{
+        cursor: pointer;
+    }
 }
